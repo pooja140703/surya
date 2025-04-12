@@ -37,8 +37,35 @@
 </head>
 <body>
     <h1>🧘 Suryanamaskar Pose </h1>
+    <!-- <a href="#" id="info" class="info-style">Info</a> -->
+
     <div class="video-container">
     <img src="{{ url_for('video_feed') }}" width="800" />
     </div>
+    <!-- <a href="#" id="info" class="info-style">Info</a> -->
 </body>
+<!-- <script>
+    
+  $("#info").click(function(){
+    $("#info").html(`<p class="Desc"><b>Guidelines : </b> After pressing any key from keyboard, game begin. You just have to remember the sequence which game gives you at every level and have to click buttons accordingly. <br>After clicking right sequence you go to next level and your score increase</p><br><button class="ok-btn" onclick="window.location.reload()">Got it</button>`)
+ 
+  });
+  $("#info").click(function(){
+    
+});   -->
+<script>
+  document.getElementById("info").addEventListener("click", function() {
+    document.getElementById("info-content").innerHTML = `
+      <p class="Desc">
+        <b>Guidelines:</b> After pressing any key from keyboard, the game begins. 
+        You just have to remember the sequence given at each level and click buttons accordingly.
+        <br>After clicking the right sequence, you go to the next level and your score increases.
+      </p>
+      <br>
+      <button class="ok-btn" onclick="${window.location.reload()}">Got it</button>
+    `;
+  });
+</script>
+
+</script>
 </html>
